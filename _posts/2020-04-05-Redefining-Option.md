@@ -25,8 +25,7 @@ fn print(file: FileType) -> io::Result<()> {
 
 fn print_lines<T: BufRead>(buf: T) -> io::Result<()> {
     for line in buf.lines() {
-        let line = line?;
-        println!("{}", line);
+        println!("{}", line?);
     }
 
     Ok(())
