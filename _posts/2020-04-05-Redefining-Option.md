@@ -43,15 +43,6 @@ fn print(file: Option<&str>) -> io::Result<()> {
         |f| File::open(f).and_then(|file| print_lines(&mut BufReader::new(file))),
     )
 }
-
-fn print_lines<T: BufRead>(buf: T) -> io::Result<()> {
-    for line in buf.lines() {
-        let line = line?;
-        println!("{}", line);
-    }
-
-    Ok(())
-}
 ```
 Using `Option<&'a str>` gets us all of the combinators defined on `Option<T>` to write the same function concisely.
 
