@@ -1,6 +1,3 @@
-## Redefining option
-
----
 Sum types are very tempting. I often find myself wanting to define a new type because they're cool!
 However, there are numerous cases where a custom enum can elide use of built-ins.
 
