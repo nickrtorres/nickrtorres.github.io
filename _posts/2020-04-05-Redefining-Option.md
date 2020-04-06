@@ -13,7 +13,8 @@ enum FileType<'a> {
 ```
 
 Using our new enum we can write a function that opens a `FileType` and prints
-its lines.  ```rust
+its lines.
+```rust
 fn print(file: FileType) -> io::Result<()> {
     let stdin = stdin();
     match file {
