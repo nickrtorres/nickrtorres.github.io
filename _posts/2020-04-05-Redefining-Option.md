@@ -1,8 +1,10 @@
-Sum types are very tempting. I often find myself wanting to define a new type because they're cool!
-However, there are numerous cases where a custom enum can elide use of built-ins.
+Sum types are very tempting. I often find myself wanting to define a new type
+because they're cool!  However, there are numerous cases where a custom enum can
+elide use of built-ins.
 
-Consider a program that can either read from a file or standard in.
-Based on the previous sentence alone, it sounds like we have defined a new type with two variants: `File` and `Stdin`:
+Consider a program that can either read from a file or standard in.  Based on
+the previous sentence alone, it sounds like we have defined a new type with two
+variants: `File` and `Stdin`:
 ```rust
 enum FileType<'a> {
     File(&'a str),
@@ -10,8 +12,8 @@ enum FileType<'a> {
 }
 ```
 
-Using our new enum we can write a function that opens a `FileType` and prints its lines.
-```rust
+Using our new enum we can write a function that opens a `FileType` and prints
+its lines.  ```rust
 fn print(file: FileType) -> io::Result<()> {
     let stdin = stdin();
     match file {
@@ -32,8 +34,8 @@ fn print_lines<T: BufRead>(buf: T) -> io::Result<()> {
 }
 ```
 
-This works ok, but it forces us to use exhaustive case analysis on our `FileType` enum.
-Let's try to rescope this problem with `Option<str>`
+This works ok, but it forces us to use exhaustive case analysis on our
+`FileType` enum.  Let's try to rescope this problem with `Option<str>`
 ```rust
 fn print(file: Option<&str>) -> io::Result<()> {
     let stdin = stdin();
@@ -43,6 +45,7 @@ fn print(file: Option<&str>) -> io::Result<()> {
     )
 }
 ```
-Using `Option<str>` gets us all of the combinators defined on `Option<T>` to write the same function concisely.
+Using `Option<str>` gets us all of the combinators defined on `Option<T>` to
+write the same function concisely.
 
 So is this really better? I don't know. It might be.
