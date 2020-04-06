@@ -32,8 +32,8 @@ fn print_lines<T: BufRead>(buf: T) -> io::Result<()> {
 }
 ```
 
-This works ok, but it forces us to explicitly use case analysis on our `FileType` enum.
-Let's try to rescope this problem with `Option<&'a str>`
+This works ok, but it forces us to use exhaustive case analysis on our `FileType` enum.
+Let's try to rescope this problem with `Option<str>`
 ```rust
 fn print(file: Option<&str>) -> io::Result<()> {
     let stdin = stdin();
@@ -43,6 +43,6 @@ fn print(file: Option<&str>) -> io::Result<()> {
     )
 }
 ```
-Using `Option<&'a str>` gets us all of the combinators defined on `Option<T>` to write the same function concisely.
+Using `Option<str>` gets us all of the combinators defined on `Option<T>` to write the same function concisely.
 
 So is this really better? I don't know. It might be.
