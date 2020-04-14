@@ -3,7 +3,7 @@
 [Crafting Interpreters][ci] is really good. I've been working through it in Rust.
 Below are some notes from my campaign:
 
-Consider jlox's [Expr implementation][jlox-expr]:
+Consider jlox's [`Expr` implementation][jlox-expr]:
 ```java
 abstract class Expr {
     static class Binary {
@@ -42,7 +42,7 @@ impl<T, U> for Binary<T, U> {
 ```
 
 This differs from jlox's implementation in a number of ways, notably: it is
-generic over any type (T, U) for `left` and `right`. Since Rust allows
+generic over any type (`T, U`) for `left` and `right`. Since Rust allows
 [bounds][doc-bounds] on generics, T and U can easily be restricted to conform to
 an interface of our choosing later. In fact, trait bounds are similar to how
 jlox gets around this problem in Java. To avoid having to muck with the
