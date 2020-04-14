@@ -33,7 +33,7 @@ struct Binary<T, U> {
 }
 
 impl<T, U> for Binary<T, U> {
-    pub fn new(left: T, operator: Token, right: operator) -> Self {
+    pub fn new(left: T, operator: Token, right: U) -> Self {
         Binary {
             left,
             operator,
