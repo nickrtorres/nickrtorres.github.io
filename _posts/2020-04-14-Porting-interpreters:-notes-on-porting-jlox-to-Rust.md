@@ -47,11 +47,10 @@ This differs from jlox's implementation in a number of ways, notably: it is
 generic over any type (`T, U`) for `left` and `right`. Since Rust allows
 [bounds][doc-bounds] on generics, `T` and `U` can easily be restricted to
 conform to an interface of our choosing later. In fact, trait bounds are
-similar to how jlox gets around this problem in Java. To avoid having to muck
-with the internals of each `Expr` specialization, [jlox uses the visitor
+similar to how jlox gets around this problem in Java. To avoid having to modify
+the implementation of each `Expr` specialization, [jlox uses the visitor
 pattern][jlox-visitor]; allowing an arbitrary number of new methods to be
-implemented for each `Expr` implementation without having to muck with the
-implementation details of each specialization.
+implemented for each `Expr` implementation.
 
 [ci]: http://www.craftinginterpreters.com/
 [jlox-visitor]: https://github.com/munificent/craftinginterpreters/blob/3dc7cc2030b26dc747d339cde4aa31dad1189b7b/java/com/craftinginterpreters/lox/Expr.java#L7
