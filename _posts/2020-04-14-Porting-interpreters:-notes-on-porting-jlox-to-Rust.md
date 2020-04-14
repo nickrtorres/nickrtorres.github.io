@@ -1,5 +1,6 @@
 ---
-title: Porting Interpreters: notes on porting jlox to Rust
+layout: post
+title: Porting Interpreters\: notes on porting jlox to Rust
 ---
 [Crafting Interpreters][ci] is really good. I've been working through it in Rust.
 Below are some notes from my campaign:
