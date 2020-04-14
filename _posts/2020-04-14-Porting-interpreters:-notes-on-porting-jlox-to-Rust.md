@@ -1,5 +1,3 @@
-## Abstraction, object-oriented programming, and traits
-
 [Crafting Interpreters][ci] is really good. I've been working through it in Rust.
 Below are some notes from my campaign:
 
