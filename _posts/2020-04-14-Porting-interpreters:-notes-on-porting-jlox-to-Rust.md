@@ -51,8 +51,7 @@ pattern][jlox-visitor]; allowing an arbitrary number of new methods to be
 implemented for each `Expr` implementation without having to muck with the
 implementation details of each specialization.
 
----
-[ci](http://www.craftinginterpreters.com/)
-[jlox-visitor](https://github.com/munificent/craftinginterpreters/blob/3dc7cc2030b26dc747d339cde4aa31dad1189b7b/java/com/craftinginterpreters/lox/Expr.java#L7)
-[jlox-expr](https://github.com/munificent/craftinginterpreters/blob/3dc7cc2030b26dc747d339cde4aa31dad1189b7b/java/com/craftinginterpreters/lox/Expr.java#L40)
-[doc-bounds](https://doc.rust-lang.org/stable/rust-by-example/generics/bounds.html)
+[ci]: http://www.craftinginterpreters.com/
+[jlox-visitor]: https://github.com/munificent/craftinginterpreters/blob/3dc7cc2030b26dc747d339cde4aa31dad1189b7b/java/com/craftinginterpreters/lox/Expr.java#L7
+[jlox-expr]: https://github.com/munificent/craftinginterpreters/blob/3dc7cc2030b26dc747d339cde4aa31dad1189b7b/java/com/craftinginterpreters/lox/Expr.java#L40
+[doc-bounds]: https://doc.rust-lang.org/stable/rust-by-example/generics/bounds.html
