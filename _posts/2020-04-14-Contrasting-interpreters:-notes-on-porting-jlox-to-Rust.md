@@ -2,7 +2,7 @@
 layout: post
 title: ! 'Contrasting interpreters: notes on porting jlox to Rust'
 ---
-[Crafting Interpreters][ci] is really good. I've been working through it in Rust.
+[Crafting Interpreters][ci] is really good. I've been working through it [in Rust][rlox].
 Below are some notes from my campaign:
 
 Consider jlox's [`Expr` implementation][jlox-expr]:
@@ -53,6 +53,7 @@ pattern][jlox-visitor]; allowing an arbitrary number of new methods to be
 implemented for each `Expr` implementation.
 
 [ci]: http://www.craftinginterpreters.com/
+[rlox]: https://github.com/nickrtorres/rlox
 [jlox-visitor]: https://github.com/munificent/craftinginterpreters/blob/3dc7cc2030b26dc747d339cde4aa31dad1189b7b/java/com/craftinginterpreters/lox/Expr.java#L7
 [jlox-expr]: https://github.com/munificent/craftinginterpreters/blob/3dc7cc2030b26dc747d339cde4aa31dad1189b7b/java/com/craftinginterpreters/lox/Expr.java#L40
 [doc-bounds]: https://doc.rust-lang.org/stable/rust-by-example/generics/bounds.html
