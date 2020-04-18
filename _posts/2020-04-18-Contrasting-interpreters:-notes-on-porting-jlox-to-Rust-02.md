@@ -19,5 +19,5 @@ There are a lot of `Box's` involved, which likely means this doesn't perform
 well. However, for this first past at least, I'm not going to worry about it
 too much.
 
-[blog-prev]: https://blog.nickrtorres.com/2020/04/14/Contrasting-interpreters-notes-on-porting-jlox-to-Rust.html
+[blog-prev]: https://blog.nickrtorres.com/2020/04/14/Contrasting-interpreters-notes-on-porting-jlox-to-Rust-01.html
 [rlox-gh]: https://github.com/nickrtorres/rlox
