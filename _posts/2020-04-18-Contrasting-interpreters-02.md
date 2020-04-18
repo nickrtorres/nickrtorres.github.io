@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Contrasting interpreters: notes on porting jlox to Rust 02'
+title: ! 'Contrasting interpreters 02'
 ---
 In a [previous post][blog-prev] I talked about using Generics instead of OOP
 for [rlox's][rlox-gh] `Expr` representation. This did not work. Instead, I used
