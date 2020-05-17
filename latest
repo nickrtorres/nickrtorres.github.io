@@ -13,6 +13,6 @@ if __name__ == '__main__':
             name = file
             latest = int(post.groups()[0])
 
-    print(name)
+    print(f'./_posts/{name}')
 
 
