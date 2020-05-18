@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Creates a new post with a post number of argv[1]
 import datetime
 import sys
 

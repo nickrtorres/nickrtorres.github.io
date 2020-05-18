@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+# Grabs the latest TWIL post and return its path relative to _posts/.
+#
+# There are two notable use cases for this utility:
+# 1. Quickly identifying the last post (to know what the next post should be)
+# 2. Easily editing the last post e.g. `vim $(./latest)`
 import os
 import re
 
