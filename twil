@@ -3,10 +3,15 @@
 import argparse
 import datetime
 import sys
+import os
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Generate a new TWIL post')
-    parser.add_argument('--number', '-n', dest='number', required=True, type=int)
+    parser.add_argument('--number',
+                        '-n',
+                        dest='number',
+                        required=True,
+                        type=int)
     parser.add_argument('--late', '-l', action='store_true', required=False)
     args = parser.parse_args()
 
@@ -14,13 +19,17 @@ if __name__ == '__main__':
     post = args.number
     base = f'{iso}-TIL-{post}'
 
-    with open(f'_posts/{base}.md', 'w') as f:
-        f.write('---\n')
-        f.write('layout: post\n')
-        f.write(f'title: This week I learned {post}')
-        if args.late:
-            f.write(f' — late post')
-        f.write('\n')
-        f.write('categories: [TIL]\n')
-        f.write('---\n')
-        print(f.name)
+    try:
+        os.stat(f'_posts/{base}.md')
+        print('Error: file already exists')
+    except FileNotFoundError:
+        with open(f'_posts/{base}.md', 'w') as f:
+            f.write('---\n')
+            f.write('layout: post\n')
+            f.write(f'title: This week I learned {post}')
+            if args.late:
+                f.write(f' — late post')
+            f.write('\n')
+            f.write('categories: [TIL]\n')
+            f.write('---\n')
+            print(f.name)
